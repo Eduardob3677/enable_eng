@@ -39,10 +39,17 @@ resetprop ro.secure 0
 resetprop ro.adb.secure 0
 resetprop ro.debuggable 1
 resetprop ro.kernel.android.checkjni 1
+resetprop persist.service.adb.enable 1
+resetprop persist.service.debuggable 0
+resetprop persist.sys.usb.config mtp,adb
+resetprop service.adb.tcp.port 33445
 
 resetprop_exists ro.build.type eng
 resetprop_exists ro.odm.build.type eng
 resetprop_exists ro.system.build.type eng
+resetprop_exists ro.system_ext.build.type eng
+resetprop_exists ro.system_dlkm.build.type eng
+resetprop_exists ro.vendor_dlkm.build.type eng
 resetprop_exists ro.vendor.build.type eng
 resetprop_exists ro.product.build.type eng
 
@@ -51,6 +58,9 @@ resetprop_exists_replace ro.build.description
 resetprop_exists_replace ro.build.version.base_os
 resetprop_exists_replace ro.build.fingerprint
 resetprop_exists_replace ro.bootimage.build.fingerprint
+resetprop_exists_replace ro.system_dlkm.build.fingerprint
+resetprop_exists_replace ro.system_ext.build.fingerprint
+resetprop_exists_replace ro.vendor_dlkm.build.fingerprint
 resetprop_exists_replace ro.odm.build.fingerprint
 resetprop_exists_replace ro.system.build.fingerprint
 resetprop_exists_replace ro.vendor.build.fingerprint
@@ -59,12 +69,17 @@ resetprop_exists_replace ro.product.build.fingerprint
 resetprop_exists_replace ro.build.tags
 resetprop_exists_replace ro.odm.build.tags
 resetprop_exists_replace ro.system.build.tags
+resetprop_exists_replace ro.system_ext.build.tags
+resetprop_exists_replace ro.system_dlkm.build.tags
+resetprop_exists_replace ro.vendor_dlkm.build.tags
 resetprop_exists_replace ro.vendor.build.tags
 resetprop_exists_replace ro.product.build.tags
 
 resetprop_exists persist.service.debuggable 1
 resetprop_exists persist.service.adb.enable 1
 resetprop_exists debug.enable true
+resetprop_exists service.adb.tcp.port 33445
+resetprop_exists persist.sys.usb.config mtp,adb
 
 EOF
 
