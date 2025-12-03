@@ -38,11 +38,9 @@ wait_boot_complete
 resetprop ro.secure 0
 resetprop ro.adb.secure 0
 resetprop ro.debuggable 1
-resetprop ro.kernel.android.checkjni 1
 resetprop persist.service.adb.enable 1
-resetprop persist.service.debuggable 0
+resetprop persist.service.debuggable 1
 resetprop persist.sys.usb.config mtp,adb
-resetprop service.adb.tcp.port 33445
 
 resetprop_exists ro.build.type eng
 resetprop_exists ro.odm.build.type eng
@@ -78,8 +76,7 @@ resetprop_exists_replace ro.product.build.tags
 resetprop_exists persist.service.debuggable 1
 resetprop_exists persist.service.adb.enable 1
 resetprop_exists debug.enable true
-resetprop_exists service.adb.tcp.port 33445
-resetprop_exists persist.sys.usb.config mtp,adb
+
 
 EOF
 
