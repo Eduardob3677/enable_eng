@@ -1,7 +1,12 @@
 resetprop ro.secure 0
 resetprop ro.adb.secure 0
 resetprop ro.debuggable 1
+resetprop ro.force.debuggable 1
 resetprop ro.kernel.android.checkjni 1
 resetprop persist.service.adb.enable 1
 resetprop persist.service.debuggable 1
-
+resetprop persist.sys.usb.config mtp,adb
+resetprop persist.vendor.sys.rawdump_copy 1
+resetprop ro.boot.debug_level 0x4948
+resetprop persist.vendor.ssr.enable_ramdumps 1
+resetprop ro.binary.type factory
