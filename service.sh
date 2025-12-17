@@ -38,9 +38,15 @@ wait_boot_complete
 resetprop ro.secure 0
 resetprop ro.adb.secure 0
 resetprop ro.debuggable 1
+resetprop ro.force.debuggable 1
+resetprop ro.kernel.android.checkjni 1
 resetprop persist.service.adb.enable 1
 resetprop persist.service.debuggable 1
 resetprop persist.sys.usb.config mtp,adb
+resetprop persist.vendor.sys.rawdump_copy 1
+resetprop ro.boot.debug_level 0x4948
+resetprop persist.vendor.ssr.enable_ramdumps 1
+resetprop ro.binary.type factory
 
 resetprop_exists ro.build.type eng
 resetprop_exists ro.odm.build.type eng
@@ -50,6 +56,7 @@ resetprop_exists ro.system_dlkm.build.type eng
 resetprop_exists ro.vendor_dlkm.build.type eng
 resetprop_exists ro.vendor.build.type eng
 resetprop_exists ro.product.build.type eng
+resetprop_exists ro.binary.type factory
 
 resetprop_exists_replace ro.build.flavor
 resetprop_exists_replace ro.build.description
@@ -76,7 +83,9 @@ resetprop_exists_replace ro.product.build.tags
 resetprop_exists persist.service.debuggable 1
 resetprop_exists persist.service.adb.enable 1
 resetprop_exists debug.enable true
-
+resetprop_exists ro.boot.debug_level 0x4948
+resetprop_exists ro.binary.type factory
+resetprop_exists ro.debuggable 1
 
 EOF
 
